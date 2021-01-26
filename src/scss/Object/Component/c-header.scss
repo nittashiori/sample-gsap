@@ -1,4 +1,7 @@
 .c-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -10,9 +13,8 @@
   top: 100px;
   left: 50%;
   transform: translate(-50%);
-}
 
-.c-eader h1 {
-  font-size: 48px;
-  opacity: 0;
+  h1 {
+    font-size: 16px;
+  }
 }
