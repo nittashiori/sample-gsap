@@ -3,6 +3,10 @@
   width: 100px;
   height: 100px;
   margin: auto;
+  display: none;
+  &.active {
+    display: block;
+  }
   &__box {
     position: absolute;
     width: 50px;
