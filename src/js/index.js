@@ -1,4 +1,4 @@
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 const tween = gsap.to('header', {
     duration: 0.5,
@@ -46,3 +46,34 @@ tl.from('.c-boxes__box', {
     .to('.c-boxes__box', {
         scale: 0,
     });
+
+gsap.timeline({
+    default: { ease: 'power2.out', duration: 1 }, // timelineのプロパティ
+    scrollTrigger: {
+        markers: true, // マーカーを表示するか（開発用）
+        trigger: '.c-content', // この要素と交差するとイベントが発火
+        start: 'top 50%', // ウィンドウのどの位置を発火の基準点にするか
+        end: 'bottom top', // ウィンドウのどの位置をイベントの終了点にするか
+        toggleActions: 'play none none none', // スクロールイベントで発火するアニメーションの種類
+    },
+})
+    .to('.c-content__text h2', {
+        opacity: 1,
+        y: -10,
+    })
+    .to(
+        '.c-content__text p',
+        {
+            opacity: 1,
+            y: -10,
+        },
+        '-=1',
+    ) //直前のアニメーションに0.7秒かぶせる
+    .to(
+        '.c-content__img',
+        {
+            opacity: 1,
+            x: -10,
+        },
+        '-=1',
+    ); //直前のアニメーションに0.7秒かぶせる

@@ -1,0 +1,17 @@
+.c-content {
+  display: flex;
+  width: 600px;
+  margin: 100px auto 500px;
+  &__text {
+    margin-right: 50px;
+  }
+  &__text h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  &__text h2,
+  &__text p,
+  &__img {
+    opacity: 0;
+  }
+}
