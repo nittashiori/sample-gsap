@@ -10,7 +10,7 @@ const tween = gsap.to('header', {
 const header = document.getElementsByClassName('c-header')[0];
 header.addEventListener('click', () => tween.play());
 
-gsap.to('img', {
+gsap.to('.c-img-container img', {
     delay: 1,
     duration: 1.5,
     y: -10, // 少し上に移動させる
