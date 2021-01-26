@@ -4,7 +4,7 @@
 
 gsap（GreenSock Animation Platform）は、GreenSock 社が開発した高機能アニメーションライブラリです。
 
--   (公式サイト)[https://greensock.com/]
+-   [公式サイト](https://greensock.com/)
 
 ## 使い方
 
