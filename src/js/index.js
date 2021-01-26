@@ -22,3 +22,27 @@ gsap.to('.c-img-container img', {
         amount: 0.8, // 0.8秒おきに
     },
 });
+
+const tl = gsap.timeline({
+    repeat: -1, // アニメーションの繰り返し回数。-1で無限回。
+    repeatDelay: 0.3, // ループとループの間の時間
+    defaults: { duration: 0.5, ease: 'power4.out' }, // tweenのデフォルトの値
+});
+
+// アニメーションを実行
+tl.from('.c-boxes__box', {
+    scale: 0,
+})
+    .to('.c-boxes__box1', {
+        left: 50,
+    })
+    .to(
+        '.c-boxes__box2',
+        {
+            right: 50,
+        },
+        '<',
+    ) // "<"は「前のアニメーションと同時に再生する」オプション
+    .to('.c-boxes__box', {
+        scale: 0,
+    });
