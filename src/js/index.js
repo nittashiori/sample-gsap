@@ -1,3 +1,9 @@
+const { gsap } = require('gsap/dist/gsap');
+const { ScrollTrigger } = require('gsap/dist//ScrollTrigger');
+
+// プラグインはgsap.registerPluginで登録
+gsap.registerPlugin(ScrollTrigger);
+
 const button = document.getElementsByClassName('c-header')[0];
 const loading = document.getElementsByClassName('c-boxes')[0];
 
