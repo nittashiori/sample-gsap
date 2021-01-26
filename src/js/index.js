@@ -8,5 +8,17 @@ const tween = gsap.to('header', {
 });
 
 const header = document.getElementsByClassName('c-header')[0];
-console.log(header);
 header.addEventListener('click', () => tween.play());
+
+gsap.to('.c-img-container img', {
+    delay: 1,
+    duration: 1.5,
+    y: -10, // 少し上に移動させる
+    opacity: 1,
+    ease: 'power2.out',
+    // 複数要素を扱うプロパティ
+    stagger: {
+        from: 'start', // 左側から
+        amount: 0.8, // 0.8秒おきに
+    },
+});

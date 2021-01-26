@@ -1,0 +1,10 @@
+.c-img-container {
+  display: grid;
+  gap: 100px;
+  grid-auto-flow: column;
+  margin: 250px 200px 600px;
+  justify-content: center;
+  img {
+    opacity: 0;
+  }
+}
